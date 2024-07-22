@@ -14,4 +14,8 @@ public class CatalogService {
     CatalogRepo catalogRepo;
 
     public List<GameCatalog> findAllGames(){return catalogRepo.findAll(); }
+
+    public List<GameCatalog> findByTitle(String title){return catalogRepo.findByTitleContainingIgnoreCase(title); }
+
+    public GameCatalog saveNewGame(GameCatalog game){return catalogRepo.save(game);}
 }
