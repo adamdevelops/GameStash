@@ -28,12 +28,12 @@ public class CatalogController {
         return new ResponseEntity<>(games, HttpStatus.OK);
     }
 
-//    @GetMapping("/game/owned")
-//    public ResponseEntity<List<GameCatalog>> getOwnedGames(){
-//        Boolean owned_games = true;
-//        List<GameCatalog> games = catalogService.findByIfOwned(owned_games);
-//        return new ResponseEntity<>(games, HttpStatus.OK);
-//    }
+    @GetMapping("/game/owned")
+    public ResponseEntity<List<GameCatalog>> getOwnedGames(){
+        Boolean owned_games = true;
+        List<GameCatalog> games = catalogService.findByIfOwned(owned_games);
+        return new ResponseEntity<>(games, HttpStatus.OK);
+    }
 
     @PostMapping("/newgame")
     public ResponseEntity addGame(@RequestBody GameCatalog game){

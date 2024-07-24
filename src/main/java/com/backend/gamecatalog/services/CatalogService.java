@@ -17,7 +17,7 @@ public class CatalogService {
 
     public List<GameCatalog> findByTitle(String title){return catalogRepo.findByTitleContainingIgnoreCase(title); }
 
-//    public List<GameCatalog> findByIfOwned(Boolean game_owned){return catalogRepo.findByGame_owned(game_owned); }
+    public List<GameCatalog> findByIfOwned(Boolean gameOwned){return catalogRepo.findByGameOwned(gameOwned); }
 
     public GameCatalog saveNewGame(GameCatalog game){return catalogRepo.save(game);}
 

@@ -8,7 +8,7 @@ import java.util.List;
 public interface CatalogRepo extends JpaRepository<GameCatalog, Integer> {
     List<GameCatalog> findByTitleContainingIgnoreCase(String title);
 
-//    List<GameCatalog> findByGame_owned(Boolean game_owned);
+    List<GameCatalog> findByGameOwned(Boolean gameOwned);
 
     void deleteById(Integer gameId);
 }

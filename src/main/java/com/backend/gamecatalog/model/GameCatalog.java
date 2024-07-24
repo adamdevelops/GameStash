@@ -22,6 +22,6 @@ public class GameCatalog {
     private String console_owned_on;
     private String consoles;
     private String date_purchased;
-    private boolean game_owned;
+    private boolean gameOwned;
 
 }
