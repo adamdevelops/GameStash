@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
 @Injectable({
@@ -7,6 +7,11 @@ import { Injectable } from '@angular/core';
 export class GameService {
   
   url: String = 'http://localhost:8080/gamecatalog/'
+
+  // httpOptions = new HttpHeaders({
+  //   'Content-Type' : 'application/json',
+  //   'Access-Control-Allow-Origin': '*'
+  // })
 
   constructor(private http: HttpClient) { }
 

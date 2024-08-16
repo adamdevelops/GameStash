@@ -1,6 +1,9 @@
 <div id="home-page">
     <h2>Home page</h2>
-    <div id="search-bar"><input placeholder="Search for a game..." /></div>
+    <div id="search-bar">
+        <button class="search-btn">Search</button>
+        <input placeholder="Search for a game..." />
+    </div>
 
     <div id="collection-area">
         <div id="collection-groups">
@@ -12,7 +15,7 @@
             </div>
             <div id="collection-games">
                 <h4>Collection</h4>
-                <ul *ngFor="let game of example_games">
+                <ul *ngFor="let game of games">
                     <li>{{game.title}}     {{game.console_owned_on}}   {{game.date_purchased}}</li>
                 </ul>
             </div>

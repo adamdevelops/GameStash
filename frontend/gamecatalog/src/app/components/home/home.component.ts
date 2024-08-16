@@ -1,4 +1,6 @@
+import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
+import { GameService } from 'src/app/services/game.service';
 
 @Component({
   selector: 'app-home',
@@ -18,5 +20,22 @@ export class HomeComponent {
     {name: "Xbox", date_released: "2050"},
     {name: "Steam", date_released: "2050"},
   ]
+
+  games: any;
+
+  constructor(private http: HttpClient, private gameService: GameService){
+    this.getAllGames()
+  }
+
+
+  getAllGames(){
+    console.log('calling getAllGames()')
+    this.games = this.gameService.getAllGames().subscribe((resp: any) => {
+      console.log('resp', resp)
+
+      this.games = resp;
+      
+    })
+  }
 
 }
